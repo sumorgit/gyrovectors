@@ -2,6 +2,7 @@ from gyrovectors import Array
 
 
 def mob_add(u: Array, v: Array, s: float, back) -> Array:
+    """Computes Möbius Addition"""
     _dot = back.dot(u, v)
     _norm_square_u = back.sum(back.square(u), axis=-1)
     _norm_square_v = back.sum(back.square(v), axis=-1)
@@ -15,6 +16,7 @@ def mob_add(u: Array, v: Array, s: float, back) -> Array:
 
 
 def mob_multiply(r: float, v: Array, s: float, back) -> Array:
+    """Computes Möbius Multiplication"""
     _norm_v = back.sqrt(back.sum(back.square(v), axis=-1))
     _ratio = _norm_v / s
 
@@ -25,6 +27,7 @@ def mob_multiply(r: float, v: Array, s: float, back) -> Array:
 
 
 def mob_coadd(u: Array, v: Array, s: float, back) -> Array:
+    """Computes Möbius Coaddition"""
     _gamma_u = gamma(u, s, back)
     _gamma_v = gamma(v, s, back)
 
@@ -35,6 +38,7 @@ def mob_coadd(u: Array, v: Array, s: float, back) -> Array:
 
 
 def gamma(u: Array, s: float, back) -> float:
+    """Computes the gamma"""
     _norm_square_u = back.sum(back.square(u), axis=-1)
     _ratio = _norm_square_u / s**2
     return 1 / back.sqrt(1 - _ratio)

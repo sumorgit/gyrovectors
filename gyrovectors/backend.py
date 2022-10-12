@@ -77,6 +77,7 @@ class Backends(Enum):
 
 
 def get_backend(name: str) -> AbstractBack:
+    """Returns the backend corresponding to the given name"""
     for back in Backends:
         if name == back.name:
             return back.value()
