@@ -5,7 +5,7 @@ This project is based on [Gyrogroups, the Grouplike Loops in the Service of Hype
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install git+https://github.com/Raffaelbdl/gyrovectors
 ```
 
 ## Usage
