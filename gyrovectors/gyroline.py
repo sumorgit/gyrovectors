@@ -1,5 +1,5 @@
 from gyrovectors import Array
-from gyrovectors.linalg import mob_add, mob_multiply
+from gyrovectors.operations import mob_add, mob_multiply
 
 
 def get_gyroline_value(u: Array, v: Array, t: float, s: float, back) -> Array:

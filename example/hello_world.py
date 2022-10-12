@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 from gyrovectors.backend import get_backend
-from gyrovectors.linalg import mob_add, mob_multiply
+from gyrovectors.operations import mob_add, mob_multiply
 from gyrovectors.plots import init_circle_figure, plot_gyroline
 
 
